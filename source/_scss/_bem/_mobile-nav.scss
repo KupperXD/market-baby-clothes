@@ -1,0 +1,12 @@
+.mobile-nav {
+    &__item {
+        &:not(:first-of-type) {
+            margin: 16px 0 0;
+        }
+    }
+
+    &__link {
+        font: inherit;
+        color: inherit;
+    }
+}

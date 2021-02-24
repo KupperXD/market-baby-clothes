@@ -1,0 +1,42 @@
+.header-nav {
+    font-size: 14px;
+    line-height: 1;
+    color: $white;
+
+    @media (max-width: $desktop-md-max) {
+        line-height: 24px;
+    }
+
+    &__list {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 21px;
+
+        @media (max-width: $desktop-md-max) {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            max-width: 390px;
+            margin: -2px -12px;
+            column-gap: 0;
+        }
+    }
+
+    &__item {
+        @media (max-width: $desktop-md-max) {
+            margin: 2px 12px;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 0;
+        font: inherit;
+        color: inherit;
+        text-decoration: none;
+
+        @media (max-width: $desktop-md-max) {
+            padding: 0;
+        }
+    }
+}

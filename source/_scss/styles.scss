@@ -1,4 +1,7 @@
-body {
-    padding: 15px;
-    background: green;
-}
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "base";
+@import "helpers";
+@import "layout";
+@import "_bem/*.scss";

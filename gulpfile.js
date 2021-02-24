@@ -16,6 +16,8 @@ const svgo         = require('gulp-svgo');
 const svgstore     = require('gulp-svgstore');
 const uglify       = require('gulp-uglify-es').default;
 const server = require("browser-sync").create();
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 const pluginsJSPaths = [
     ''
@@ -26,7 +28,7 @@ const pluginsCSSPaths = [
 ];
 
 const copySrc = [
-    'source/*.html'
+    'source/fonts/*.*'
 ];
 
 const paths = {
@@ -113,9 +115,17 @@ function svg() {
         .pipe(gulp.dest(paths.svg.dest));
 }
 
+function html() {
+    return gulp.src('source/*.html')
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(gulp.dest('dist/'));
+}
+
 function copy() {
     return gulp.src(copySrc)
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('dist/font/'));
 }
 
 function serverLive() {
@@ -130,7 +140,8 @@ function serverLive() {
     gulp.watch(paths.scripts.watch, {interval: 200}, scripts);
     gulp.watch(paths.styles.watch, {interval: 200}, styles);
     gulp.watch(paths.svg.src, {interval: 200}, svg);
-    gulp.watch('source/*.html', copy).on('change', server.reload);
+    gulp.watch(paths.images.src, {interval: 200}, images);
+    gulp.watch('source/*.html', html).on('change', server.reload);
 }
 
 // function pluginsJS() {
@@ -157,7 +168,7 @@ function serverLive() {
 // }
 
 function clean() {
-    return del('build');
+    return del('dist');
 }
 
 //////////////////////////////////////////////
@@ -171,7 +182,7 @@ gulp.task('js', gulp.series(scripts));
 gulp.task('clean', gulp.series(clean));
 gulp.task('serverLive', gulp.series(serverLive));
 
-gulp.task('build', gulp.series(clean, copy,styles, scripts, svg));
+gulp.task('build', gulp.series(clean, copy, images,styles, scripts, svg, html));
 gulp.task('watch', function () {
     gulp.watch(paths.scripts.watch, {interval: 200}, scripts);
     gulp.watch(paths.styles.watch, {interval: 200}, styles);

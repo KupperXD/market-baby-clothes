@@ -1,0 +1,38 @@
+.footer-nav {
+    &__item {
+        &:not(:first-of-type) {
+            margin: 8px 0 0;
+
+            @media (max-width: $desktop-sm-max) {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: $desktop-sm-max) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        font: inherit;
+        color: inherit;
+
+        @media (max-width: $desktop-sm-max) {
+            text-align: center;
+        }
+
+        &--title {
+            font-family: $ralewayBold;
+            font-weight: 700;
+        }
+    }
+
+    &--left-gap {
+        padding: 12px 0 0 70px;
+
+        @media (max-width: $desktop-sm-max) {
+            padding: 0;
+        }
+    }
+}
