@@ -192,7 +192,7 @@
                     <div class="footer__inner">
                         <div class="footer__logo">
                             <a class="footer__logo-link" href="">
-                                <img src="../img/official/logo-footer.svg" alt="">
+                                <img src="img/official/logo-footer.svg" alt="">
                             </a>
                         </div>
                         <div class="footer__nav footer-nav footer-nav--left-gap">
@@ -319,6 +319,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
+            const html = document.querySelector('html');
             const pageWrapper = document.querySelector('.js-page-wrapper');
             const header = document.querySelector('.js-header');
             const burgerToggle = header.querySelector('.js-burger-toggle');
@@ -328,6 +329,12 @@
             burgerToggle.addEventListener('click', (evt) => {
                 burgerToggle.classList.toggle('is-active');
                 header.classList.toggle('opened');
+
+                if (header.classList.contains('opened')) {
+                    html.classList.add('fixed');
+                } else {
+                    html.classList.remove('fixed');
+                }
             });
 
             headerSearch.addEventListener('click', () => {

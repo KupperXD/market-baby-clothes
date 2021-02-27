@@ -261,6 +261,8 @@
             top: 0;
             left: 0;
             right: 0;
+            height: 100vh;
+            padding: 96px 0 0;
             background: $violet;
             color: $white;
             font-size: 21px;
@@ -269,10 +271,13 @@
             background-repeat: no-repeat;
             background-position: 232px 96px;
             background-size: 450px 380px;
+            overflow: hidden;
         }
 
         &-wrapper {
-            padding: 96px 20px 74px;
+            height: 100%;
+            padding: 0 20px 74px;
+            overflow-y: auto;
         }
 
         &-contacts {
