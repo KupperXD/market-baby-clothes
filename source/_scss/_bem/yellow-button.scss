@@ -1,0 +1,24 @@
+.yellow-button {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: $yellow;
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 14px;
+    color: $black;
+    transition: background-color 0.2s ease-in-out;
+
+    @media (max-width: $desktop-sm-max) {
+        width: 270px;
+        font-size: 17px;
+        line-height: 18px;
+    }
+
+    &:hover {
+        background-color: $green;
+    }
+}

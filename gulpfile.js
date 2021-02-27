@@ -20,11 +20,12 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 
 const pluginsJSPaths = [
-    ''
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
 ];
 
 const pluginsCSSPaths = [
-    ''
+    'node_modules/magnific-popup/dist/magnific-popup.css',
 ];
 
 const copySrc = [
@@ -44,7 +45,7 @@ const paths = {
             'source/js/_custom_plugins/*.js',
             'source/js/_main/**/*.js',
         ],
-        dest: 'dist/_js.min/',
+        dest: 'dist/js/',
         watch: [
             'source/js/_custom_plugins/*.js',
             'source/js/_main/**/*.js',
@@ -78,9 +79,8 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src, { sourcemaps: true })
         .pipe(plumber())
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('scripts.js'))
         .pipe(babel())
-        .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest, { sourcemaps: '.' }));
 }
 
@@ -144,28 +144,28 @@ function serverLive() {
     gulp.watch('source/*.html', html).on('change', server.reload);
 }
 
-// function pluginsJS() {
-//     return gulp.src(pluginsJSPaths)
-//         .pipe(plumber())
-//         .pipe(concat('_plugins-all.min.js'))
-//         .pipe(uglify({
-//             compress: false,
-//             mangle: false
-//         }))
-//         .pipe(gulp.dest('dist/_js.min/'));
-// }
+function pluginsJS() {
+    return gulp.src(pluginsJSPaths)
+        .pipe(plumber())
+        .pipe(concat('_plugins-all.min.js'))
+        .pipe(uglify({
+            compress: false,
+            mangle: false
+        }))
+        .pipe(gulp.dest('dist/js/'));
+}
 
-// function pluginsCSS() {
-//     return gulp.src(pluginsCSSPaths, { sourcemaps: true })
-//         .pipe(plumber())
-//         .pipe(concat('_plugins-all.css'))
-//         .pipe(autoprefixer({
-//             browsers: ['last 2 versions'],
-//             cascade: false
-//         }))
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest(paths.styles.dest, { sourcemaps: '.' }));
-// }
+function pluginsCSS() {
+    return gulp.src(pluginsCSSPaths, { sourcemaps: true })
+        .pipe(plumber())
+        .pipe(concat('_plugins-all.css'))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.styles.dest, { sourcemaps: '.' }));
+}
 
 function clean() {
     return del('dist');
@@ -173,16 +173,16 @@ function clean() {
 
 //////////////////////////////////////////////
 
-// gulp.task('plugins-css', gulp.series(pluginsCSS));
-// gulp.task('plugins-js', gulp.series(pluginsJS));
-// gulp.task('plugins', gulp.parallel('plugins-js', 'plugins-css'));
+gulp.task('plugins-css', gulp.series(pluginsCSS));
+gulp.task('plugins-js', gulp.series(pluginsJS));
+gulp.task('plugins', gulp.parallel('plugins-js', 'plugins-css'));
 gulp.task('images', gulp.parallel(images, svg));
 gulp.task('scss', gulp.series(styles));
 gulp.task('js', gulp.series(scripts));
 gulp.task('clean', gulp.series(clean));
 gulp.task('serverLive', gulp.series(serverLive));
 
-gulp.task('build', gulp.series(clean, copy, images,styles, scripts, svg, html));
+gulp.task('build', gulp.series(clean, copy, 'plugins', images,styles, scripts, svg, html));
 gulp.task('watch', function () {
     gulp.watch(paths.scripts.watch, {interval: 200}, scripts);
     gulp.watch(paths.styles.watch, {interval: 200}, styles);

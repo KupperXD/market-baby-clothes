@@ -35,7 +35,7 @@
     "babel-polyfill": "*",
     "gulp-posthtml": "^3.0.5",
     "inputmask": "^5.0.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "jquery-touchswipe": "^1.6.19",
     "magnific-popup": "^1.1.0",
     "object.fromentries": "^2.0.2",

@@ -1,0 +1,123 @@
+.mfp-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mfp-content {
+    position: absolute;
+    top: 240px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: auto;
+    position: absolute;
+    padding: 132px 64px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    .mfp-close {
+        display: none;
+    }
+}
+
+.popup {
+    max-width: 440px;
+    min-width: 440px;
+    position: relative;
+    background: $white;
+
+    &__wrapper {
+        padding: 48px 32px;
+
+        @media (max-width: $desktop-sm-max) {
+            padding: 42px 42px 32px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 25px;
+        line-height: 26px;
+        font-family: $ralewayBold;
+        font-weight: 700;
+        color: $black;
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+        width: max-content;
+        margin: 32px auto 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: inherit;
+        color: $black;
+        border: none;
+        background-color: transparent;
+        box-shadow: 0 1px 0 #000;
+        text-align: center;
+
+        @media (max-width: $desktop-sm-max) {
+            display: none;
+        }
+    }
+
+    &__form {
+        width: 254px;
+        margin: 42px auto 0;
+
+        @media (max-width: $desktop-sm-max) {
+            width: 100%;
+        }
+    }
+
+    &__submit {
+        margin: 24px auto 0;
+    }
+
+    &__text {
+        margin: 24px 0 0;
+        text-align: center;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            background: $black;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
