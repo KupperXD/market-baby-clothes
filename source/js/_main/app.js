@@ -56,5 +56,19 @@
             });
 
         });
+
+        const $faqHolder = $('.js-faq-holder');
+
+        $faqHolder.on('click', '.js-faq-button', function () {
+            const $newItem = $(this).closest('.js-faq-item');
+            const isOpened = $newItem.hasClass('active');
+            $faqHolder.find('.js-faq-item.active').removeClass('active');
+
+            if (isOpened) {
+                return;
+            }
+
+            $newItem.addClass('active');
+        });
     });
 })(jQuery)

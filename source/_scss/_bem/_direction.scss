@@ -99,6 +99,13 @@
             height: 36px;
             fill: $white;
             display: block;
+            animation-name: arrowTransform;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
+            &:first-of-type {
+                animation-delay: 0.1s;
+            }
 
             &:last-of-type {
                 margin: -26px 0 0;
