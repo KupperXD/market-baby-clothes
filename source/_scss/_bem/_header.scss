@@ -27,6 +27,7 @@
     }
 
     &.opened {
+        z-index: 100;
         .header__mobile {
             display: block;
         }
@@ -291,6 +292,7 @@
         }
 
         &-link {
+            width: max-content;
             font: inherit;
             color: inherit;
 

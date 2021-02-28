@@ -7,7 +7,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 260px 120px;
+        padding: 260px 120px 250px;
 
         @media (max-width: $desktop-sm-max) {
             padding: 240px 20px 120px;
@@ -46,7 +46,7 @@
     }
 
     &__link {
-        margin: 72px auto 0;
+        margin: 52px auto 0;
 
         @media (max-width: $desktop-sm-max) {
             height: 56px;
@@ -104,6 +104,106 @@
                 margin: -26px 0 0;
             }
         }
+    }  
+}
+
+.direction--small {
+    .direction {
+
+        &__wrapper {
+            height: 940px;
+            justify-content: flex-start;
+            padding: 0 0 0 56px;
+
+            @media (max-width: $desktop-md-max) {
+                height: 710px;
+                align-items: flex-end;
+                padding: 56px 0 86px 42px;
+            }
+
+            @media (max-width: $desktop-sm-max) {
+                padding: 64px 20px;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &__content {
+            width: 440px;
+            padding-top: 40px;
+
+            @media (max-width: $desktop-md-max) {
+                width: 360px;
+                padding: 0;
+            }
+
+            @media (max-width: $desktop-sm-max) {
+                width: 440px;
+            }
+        }
+
+        &__link {
+            margin: 56px 0 0;
+        }
+
+        &__title {
+            font-size: 80px;
+            line-height: 1;
+            text-align: left;
+            text-shadow: none;
+
+            @media (max-width: $desktop-md-max) {
+                font-size: 70px;
+                line-height: 75px;
+            }
+
+            @media (max-width: $desktop-sm-max) {
+                font-size: 80px;
+                line-height: 77px;
+            }    
+        }
+
+        &__bg {
+            object-position: center top;
+        }
     }
-      
+}
+
+.direction--middle {
+    .direction {
+        &__wrapper {
+            min-height: 630px;
+            padding: 254px 40px 204px;
+
+            @media (max-width: $desktop-sm-max) {
+                align-items: flex-end;
+                justify-content: flex-start;
+                min-height: 610px;
+                padding: 290px 20px 60px;
+            }
+        }
+
+        &__title {
+            font-size: 80px;
+            line-height: 77px;
+
+            @media (max-width: $desktop-sm-max) {
+                text-align: left;
+            }
+        }
+
+        &__content {
+            @media (max-width: $desktop-sm-max) {
+                width: 100%;
+            }
+        }
+
+        &__link {
+            @media (max-width: $desktop-sm-max) {
+                margin: 42px 0 0;
+            }
+        }
+    }
 }

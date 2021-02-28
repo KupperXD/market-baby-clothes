@@ -11,6 +11,7 @@
     line-height: 14px;
     color: $black;
     transition: background-color 0.2s ease-in-out;
+    font-weight: 700;
 
     @media (max-width: $desktop-sm-max) {
         width: 270px;

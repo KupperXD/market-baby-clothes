@@ -1,0 +1,18 @@
+.category {
+    &__list {
+        display: flex;
+        align-items: flex-start;
+
+        @media (max-width: $desktop-sm-max) {
+            display: block;
+        }
+    }
+
+    &__item {
+        width: calc(100% / 3);
+
+        @media (max-width: $desktop-sm-max) {
+            width: 100%;
+        }
+    }
+}
