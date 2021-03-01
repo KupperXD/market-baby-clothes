@@ -20,7 +20,7 @@
             right: -136px;
         }
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             content: none;
         }
     }
@@ -42,7 +42,7 @@
             left: -220px;
         }
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             content: none;
         }
     }
@@ -56,7 +56,7 @@
             padding-bottom: 96px;
         }
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             padding: 44px 0 72px;
         }
     }
@@ -69,7 +69,7 @@
         margin: 0;
         text-align: left;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             font-size: 25px;
             line-height: 30px;
         }
@@ -81,7 +81,7 @@
         margin: 32px 0 0;
         column-gap: 30px;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             grid-template-columns: repeat(auto-fill, 208px);
             column-gap: 24px;
             row-gap: 54px;

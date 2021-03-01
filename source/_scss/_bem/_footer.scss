@@ -6,7 +6,7 @@
     background-color: $violet;
     color: $white;
 
-    @media (max-width: $desktop-sm-max) {
+    @media (max-width: $tablet-max) {
         font-size: 21px;
         line-height: 40px;
     }
@@ -20,7 +20,7 @@
         grid-template-columns: 170px repeat(2, 270px) 170px 170px;
         column-gap: 32px;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,7 +33,7 @@
             align-items: flex-start;
             justify-content: center;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 width: 210px;
                 height: 95px;
             }
@@ -49,7 +49,7 @@
     &__nav {
         padding: 12px 0 0;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             margin: 42px 0 0;
             padding: 0;
         }
@@ -60,7 +60,7 @@
             align-items: flex-end;
             justify-self: end;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 align-items: center;
                 justify-self: center;
             }
@@ -76,7 +76,7 @@
         color: inherit;
         font-weight: 500;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             line-height: 40px;
         }
     }
@@ -86,7 +86,7 @@
         justify-content: flex-end;
         margin: 12px 0 0;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             justify-content: center;
             margin: 42px 0 0;
         }
@@ -95,7 +95,7 @@
             font-size: 12px;
             line-height: 28px;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 font-size: 16px;
                 line-height: 28px;
             }

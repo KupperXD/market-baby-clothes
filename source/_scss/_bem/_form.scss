@@ -15,7 +15,7 @@
         &:not(:first-of-type) {
             margin: 24px 0 0;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 margin: 32px 0 0;
             }
         }
@@ -27,7 +27,7 @@
         }
 
         &--mobile-hidden {
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 display: none;
             }
         }

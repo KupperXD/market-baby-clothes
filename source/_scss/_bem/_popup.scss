@@ -31,7 +31,7 @@
     &__wrapper {
         padding: 48px 32px;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             padding: 42px 42px 32px;
         }
     }
@@ -60,7 +60,7 @@
         box-shadow: 0 1px 0 #000;
         text-align: center;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             display: none;
         }
     }
@@ -69,7 +69,7 @@
         width: 254px;
         margin: 42px auto 0;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             width: 100%;
         }
     }

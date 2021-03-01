@@ -1,0 +1,19 @@
+.main-section {
+    &--bg {
+        background-image: url(../img/official/decor-green-line.png);
+        background-repeat: no-repeat;
+        background-position: right 104px;
+
+        @media (max-width: $desktop-md-max) {
+            background-position: 120% top;
+        }
+
+        @media (max-width: $desktop-sm-max) {
+            background-position: 129% top;
+        }
+
+        @media (max-width: $tablet-max) {
+            background: none;
+        }
+    }
+}

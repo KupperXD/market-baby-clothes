@@ -4,7 +4,7 @@
     &__wrapper {
         padding: 88px 0 120px;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             padding: 64px 0;
         }
     }
@@ -15,7 +15,7 @@
         font-family: $ralewayBold;
         font-weight: 700;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             font-size: 25px;
             line-height: 35px;
         }
@@ -27,7 +27,7 @@
         column-gap: 30px;
         margin: 54px 0 0;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             max-width: 370px;
             grid-template-columns: 1fr;
             column-gap: 0;
@@ -101,7 +101,7 @@
             line-height: 18px;
             font-weight: 700;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 line-height: 18px;
                 font-size: 18px;
             }
@@ -118,7 +118,7 @@
             opacity: 0;
             transition-property: max-height, opacity, transform;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 font-size: 16px;
                 line-height: 21px;
             }
@@ -131,7 +131,7 @@
                 opacity: 1;
                 transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
-                @media (max-width: $desktop-sm-max) {
+                @media (max-width: $tablet-max) {
                     font-size: 16px;
                     line-height: 21px;
                 }

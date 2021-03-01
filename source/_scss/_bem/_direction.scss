@@ -9,7 +9,7 @@
         justify-content: center;
         padding: 260px 120px 250px;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             padding: 240px 20px 120px;
         }
 
@@ -40,7 +40,7 @@
         text-align: center;
         text-shadow: 0 0 27px rgba(1, 23, 35, 0.39);
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             font-size: 70px;
         }
     }
@@ -48,7 +48,7 @@
     &__link {
         margin: 52px auto 0;
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             height: 56px;
         }
     }
@@ -77,7 +77,7 @@
             right: -340px;
         }
 
-        @media (max-width: $desktop-sm-max) {
+        @media (max-width: $tablet-max) {
             display: none;
         }
     }
@@ -128,7 +128,7 @@
                 padding: 56px 0 86px 42px;
             }
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 padding: 64px 20px;
             }
 
@@ -146,7 +146,7 @@
                 padding: 0;
             }
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 width: 440px;
             }
         }
@@ -166,7 +166,7 @@
                 line-height: 75px;
             }
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 font-size: 80px;
                 line-height: 77px;
             }    
@@ -184,7 +184,7 @@
             min-height: 630px;
             padding: 254px 40px 204px;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 align-items: flex-end;
                 justify-content: flex-start;
                 min-height: 610px;
@@ -196,19 +196,19 @@
             font-size: 80px;
             line-height: 77px;
 
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 text-align: left;
             }
         }
 
         &__content {
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 width: 100%;
             }
         }
 
         &__link {
-            @media (max-width: $desktop-sm-max) {
+            @media (max-width: $tablet-max) {
                 margin: 42px 0 0;
             }
         }
