@@ -1,0 +1,43 @@
+.catalog-page {
+    &__wrapper {
+        padding: 182px 40px 140px;
+    }
+
+    &__grid {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__filters {
+        width: 305px;
+        flex-shrink: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0 24px 0 0;
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 900;
+        font-family: $raleway;
+        color: $text-black;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    &__products {
+        width: 100%;
+        margin: 24px 0 0;
+    }
+
+    &__sort {
+        margin: 0 0 0 auto;
+    }
+}
