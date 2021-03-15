@@ -1,0 +1,111 @@
+.profile-form {
+    border: 1px solid #eee;
+
+    @media (max-width: $tablet-max) {
+        border: none;
+        border-top: 1px solid #eee;
+    }
+
+
+    &.success-save {
+        .profile-form__success {
+            display: block;
+        }
+    }
+
+
+    &__wrapper {
+        padding: 28px 39px 32px;
+
+        @media (max-width: $tablet-max) {
+            padding: 42px 20px 0;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+
+        @media (max-width: $tablet-max) {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        column-gap: 44px;
+        row-gap: 24px;
+        margin: 16px 0 0;
+
+        @media (max-width: $tablet-max) {
+            display: block;
+            margin: 42px 0 0;
+        }
+    }
+
+    &__field {
+
+        &:not(:first-of-type) {
+            @media (max-width: $tablet-max) {
+                margin: 28px 0 0;
+            }
+        }
+    }
+
+    .form__field-input {
+        height: 40px;
+        padding: 8px 16px;
+
+        @media (max-width: $tablet-max) {
+            padding: 6px 16px;
+            font-size: 16px;
+            line-height: 38px;
+        }
+    }
+
+    &__submit {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        font-size: 13px;
+        line-height: 18px;
+        box-shadow: 0 1px 0 $black;
+        transition: opacity 0.2s ease-in-out;
+
+        @media (max-width: $tablet-max) {
+            font-size: 18px;
+        }
+
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+
+        &-inner {
+            align-self: center;
+
+            @media (max-width: $tablet-max) {
+                display: flex;
+                justify-content: center;
+                margin: 42px 0 0;
+            }
+        }
+    }
+
+    &__success {
+        display: none;
+        margin: 24px 0 0;
+        font-size: 16px;
+        line-height: 18px;
+        color: #99b42c;
+        text-align: left;
+
+        @media (max-width: $tablet-max) {
+            text-align: center;
+        }
+    }
+}

@@ -13,7 +13,7 @@
         <div style="display:none; width: 0; height: 0;">
             <include src="dist/img/svg/sprite.svg"></include>
         </div>
-        <header class="header js-header">
+        <header class="header header--black js-header">
             <div class="header__wrapper">
                 <div class="header__grid">
                     <nav class="header__nav header-nav">
@@ -68,13 +68,14 @@
                     </nav>
                     <div class="header__logo">
                         <a class="header__logo-link" href="">
-                            <img src="img/official/logo-header.svg" alt="">
+                            <img class="white-logo" src="img/official/logo-header.svg" alt="">
+                            <img class="colors-logo" src="img/official/logo-header-fill.svg" alt="">
                         </a>
                     </div>
                     <div class="header__bar">
                         <button class="header__bar-item header__search js-header-search-button" type="button">
                             <svg viewBox="0 0 1080 1080">
-                                <path d="M1067.14 1005.06L841.37 779.29c68.56-82.44 109.85-188.33 109.85-303.68C951.22 213.36 737.87 0 475.61 0 213.37 0 0 213.36 0 475.61c0 262.26 213.37 475.61 475.61 475.61 115.36 0 221.25-41.28 303.68-109.85l225.76 225.77c8.58 8.57 19.8 12.86 31.04 12.86 11.22 0 22.46-4.29 31.04-12.86 17.16-17.14 17.16-44.94.01-62.08zM87.8 475.61C87.8 261.78 261.77 87.8 475.6 87.8s387.8 173.97 387.8 387.8-173.97 387.81-387.8 387.81c-213.82.01-387.8-173.96-387.8-387.8z" fill="#fff"/>
+                                <path d="M1067.14 1005.06L841.37 779.29c68.56-82.44 109.85-188.33 109.85-303.68C951.22 213.36 737.87 0 475.61 0 213.37 0 0 213.36 0 475.61c0 262.26 213.37 475.61 475.61 475.61 115.36 0 221.25-41.28 303.68-109.85l225.76 225.77c8.58 8.57 19.8 12.86 31.04 12.86 11.22 0 22.46-4.29 31.04-12.86 17.16-17.14 17.16-44.94.01-62.08zM87.8 475.61C87.8 261.78 261.77 87.8 475.6 87.8s387.8 173.97 387.8 387.8-173.97 387.81-387.8 387.81c-213.82.01-387.8-173.96-387.8-387.8z"/>
                             </svg>
                         </button>
                         <button class="header__bar-item header__favorite" type="button">
@@ -173,234 +174,109 @@
             </div>
         </header>
         <main class="all">
-            <section class="direction direction--about">
-                <div class="direction__wrapper">
-                    <div class="direction__content">
-                        <h2 class="direction__title">
-                            DEKÉ<br> это бренд для счастливых детей и их родителей
-                        </h2>
-                        <p class="direction__description">
-                            Нами движет желание упростить жизнь мамам и папам,
-                            которые находятся в поисках самой качественной, удобной и стильной одежды для своих детей.
-                            Мы уверены, с детьми легко найти общий язык, когда между вами есть полное взаимопонимание!
-                        </p>
-                    </div>
-                    <picture>
-                        <source srcset="img/official/about_first_bg.jpg" media=(max-width: 1439px)>
-                        <img class="direction__bg" src="img/official/about_first_bg.jpg" alt="">
-                    </picture>
-                    <div class="direction__arrow">
-                        <svg>
-                            <use xlink:href="#arrow-icon"></use>
-                        </svg>
-                        <svg>
-                            <use xlink:href="#arrow-icon"></use>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-            <div class="philosophy">
+            <div class="profile-page profile-page--favorite">
                 <div class="container">
-                    <div class="philosophy__wrapper">
-                        <div class="philosophy__picture">
-                            <img src="img/official/about_second_content.png" alt="">
-                        </div>
-                        <div class="philosophy__content">
-                            <p class="philosophy__text">
-                                Мы создаем одежду, которая дарит комфорт и привлекает внимание.
-                                Поэтому именно с нашим брендом дети чувствуют себя стильно, уверенно 
-                                и комфортно с ранних лет.
-                            </p>
-                            <p class="philosophy__text">
-                                Философия бренда DEKE:
-                            </p>
-                            <p class="philosophy__title">Довольны дети — счастливы родители</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block-with-picture" style="background-image: url();">
-                <div class="block-with-picture__wrapper">
-                    <p class="block-with-picture__text">
-                        DEKE — это одежда,
-                        в которую мы одеваем 
-                        своих детей.
-                        Мы создавали этот бренд,
-                        чтобы процесс подбора 
-                        одежды для ребенка 
-                        стал намного проще.
-                    </p>        
-                </div>
-            </div>
-            <div class="partners">
-                <div class="partners__wrapper">
-                    <p class="partners__desc">
-                        Для развития нашего бренда мы привлекаем в нашу команду
-                        лучших представителей своего дела.
-                        Мы доверяем нашим партнерам и хотим, чтобы наши клиенты 
-                        были уверены в качестве товаров нашего бренда.
-                    </p>
-                    <ul class="partners__list">
-                        <li class="partners__item">
-                            <img src="" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-section main-section--bg">
-                <section class="tape-photo tape-photo--with-decor">
-                    <div class="tape-photo__wrapper">
-                        <ul class="tape-photo__list">
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo-second.jpg" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                            <li class="tape-photo__item">
-                                <div class="tape-photo__item-picture">
-                                    <img src="img/official/slider-inst-photo.png" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="tape-photo__link yellow-button" target="_blank" href="">
-                            Загляните в Instagram
-                        </a>
-                    </div>
-                </section>
-                <section class="faq js-faq-holder">
-                    <div class="container">
-                        <div class="faq__wrapper">
-                            <h3>Вопросы и ответы</h3>
-                            <div class="faq__grid">
-                                <div class="faq__grid-item">
-                                    <div class="js-faq-item faq__item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
+                    <div class="profile-page__wrapper">
+                        <p class="profile-page__title">Личный кабинет</p>
+                        <div class="profile-page__inner">
+                            <div class="profile-page__navigation">
+                                <div class="profile-navigation js-navigation-profile">
+                                    <div class="profile-navigation__wrapper">
+                                        <ul class="profile-navigation__list">
+                                            <li class="js-navigation-item profile-navigation__item active">
+                                                <a href="#" class="profile-navigation__link">
+                                                    Профиль
+                                                </a>
+                                            </li>
+                                            <li class="js-navigation-item profile-navigation__item">
+                                                <a class="profile-navigation__link" href="#">
+                                                    Мои заказы
+                                                </a>
+                                            </li>
+                                            <li class="js-navigation-item profile-navigation__item">
+                                                <a class="profile-navigation__link" href="#">
+                                                    Избранное
+                                                </a>
+                                            </li>
+                                            <li class="js-navigation-item profile-navigation__item">
+                                                <a class="profile-navigation__link" href="#">
+                                                    Выход
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="faq__grid-item ">
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Какие есть варианты доставки?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="faq__grid-item">
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Возникла ошибка при оформлении заказа. 
-                                            Что делать?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Есть ли возможность примерки перед покупкой?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте здесь
-                                        </p>
-                                    </div>
-                                    <div class="faq__item js-faq-item">
-                                        <button class="faq__open js-faq-button" type="button"></button>
-                                        <p class="faq__item-title">Возникла ошибка при оформлении заказа. 
-                                            Что делать?</p>
-                                        <p class="faq__item-content">
-                                            Доставка по Москве курьерской службой: 400 руб.
-                                            Доставка в ругионы РФ: согласно тарифам курьерской 
-                                            службы.
-                                            Подробнее о стоимости доставки узнайте <a href="#">здесь</a>
-                                        </p>
-                                    </div>
+                            </div>
+                            <div class="profile-page__content">
+                                <div class="profile-page__favorite">
+                                    <ul class="profile-page__favorite-list">
+                                        <li class="profile-page__favorite-item product">
+                                            <a href="#" target="_blank" class="product__picture">
+                                                <img src="img/official/products-item.png" alt="">
+                                                <svg>
+                                                    <use xlink:href="#eye-icon"></use>
+                                                </svg>
+                                            </a>
+                                            <h4 class="product__title">
+                                                Плотное стеганое полупальто
+                                                с капюшоном
+                                            </h4>
+                                            <span class="product__price">
+                                                10 800 Р
+                                            </span>
+                                        </li>
+                                        <li class="profile-page__favorite-item product">
+                                            <a href="#" target="_blank" class="product__picture">
+                                                <img src="img/official/products-item.png" alt="">
+                                                <svg>
+                                                    <use xlink:href="#eye-icon"></use>
+                                                </svg>
+                                            </a>
+                                            <h4 class="product__title">
+                                                Плотное стеганое полупальто
+                                                с капюшоном
+                                            </h4>
+                                            <span class="product__price">
+                                                10 800 Р
+                                            </span>
+                                        </li>
+                                        <li class="profile-page__favorite-item product">
+                                            <a href="#" target="_blank" class="product__picture">
+                                                <img src="img/official/products-item.png" alt="">
+                                                <svg>
+                                                    <use xlink:href="#eye-icon"></use>
+                                                </svg>
+                                            </a>
+                                            <h4 class="product__title">
+                                                Плотное стеганое полупальто
+                                                с капюшоном
+                                            </h4>
+                                            <span class="product__price">
+                                                10 800 Р
+                                            </span>
+                                        </li>
+                                        <li class="profile-page__favorite-item product">
+                                            <a href="#" target="_blank" class="product__picture">
+                                                <img src="img/official/products-item.png" alt="">
+                                                <svg>
+                                                    <use xlink:href="#eye-icon"></use>
+                                                </svg>
+                                            </a>
+                                            <h4 class="product__title">
+                                                Плотное стеганое полупальто
+                                                с капюшоном
+                                            </h4>
+                                            <span class="product__price">
+                                                10 800 Р
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-</div>
         </main>
         <footer class="footer">
             <div class="container">
@@ -569,7 +445,7 @@
                 </button>
             </div>
         </div>
-        <div class="hidden popup js-popup-reg">
+        <div class="hidden popup js-popup-reg"> 
             <div class="popup__wrapper">
                 <button class="popup__close js-close-popup" type="button"></button>
                 <div class="popup__content">
@@ -608,16 +484,66 @@
                     </p>
                 </div>
             </div>
-    </div>
+         </div>
+
+         <div class="hidden popup js-popup-reg"> 
+            <div class="popup__wrapper">
+                <button class="popup__close js-close-popup" type="button"></button>
+                <div class="popup__content">
+                    <h2 class="popup__title">Регистрация</h2>
+                    <div class="popup__form form">
+                        <form action="">
+                            <div class="form__inner">
+                                <div class="form__field">
+                                    <label class="form__field-label">
+                                        <input placeholder="Ваше имя*" class="form__field-input" type="text">
+                                    </label>
+                                </div>
+                                <div class="form__field has-error">
+                                    <label class="form__field-label">
+                                        <input placeholder="E-mail*" class="form__field-input" type="text">
+                                    </label>
+                                    <span class="form__error">
+                                        Неправильный ввод
+                                    </span>
+                                </div>
+                                <div class="form__field">
+                                    <label class="form__field-label">
+                                        <input placeholder="Пароль*" class="form__field-input" type="text">
+                                    </label>
+                                </div>
+                                <button class="popup__submit form__submit yellow-button" type="submit">
+                                    Зарегистрироваться
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="popup__text">
+                        Нажимая кнопку «Зарегистрироваться», вы даете свое согласие
+                        на обработку персональных данных согласно
+                        Политике конфиденциальности
+                    </p>
+                </div>
+            </div>
+         </div>
 
 
 
     <script src="js/_plugins-all.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        $(function () {
+            const $catalogPage = $('.js-catalog-page');
 
-            const html = document.querySelector('html');
+            $catalogPage.on('click', '.js-open-sort', function () {
+                $catalogPage.toggleClass('sort-mobile-opened');
+            });
+
+            $catalogPage.on('click', '.js-open-filters', function () {
+                $catalogPage.toggleClass('filter-mobile-opened');
+            });
+
+                        const html = document.querySelector('html');
             const pageWrapper = document.querySelector('.js-page-wrapper');
             const header = document.querySelector('.js-header');
             const burgerToggle = header.querySelector('.js-burger-toggle');

@@ -1,16 +1,54 @@
 .philosophy {
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
 
     &::before {
         content: '';
-        left: 100px;
-        top: 154px;
+        width: 225px;
+        height: 168px;
+        right: 272px;
+        bottom: 0;
         position: absolute;
-        background: url('../img/official/');
+        background: url('../img/official/decor_human_third.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: $desktop-md-max) {
+            right: 32px;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 152px;
+        left: 130px;
+        content: '';
+        width: 405px;
+        height: 348px;
+        background: url('../img/official/decor-crosses.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: $desktop-md-max) {
+            left: -132px;
+        }
+    }
+
+    &::before,
+    &::after {
+        @media (max-width: $tablet-max) {
+            content: none;
+        }
     }
 
 
 
     &__wrapper {
+        position: relative;
         display: flex;
         align-items: center;
         padding: 80px 0;

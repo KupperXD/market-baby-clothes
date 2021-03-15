@@ -1,0 +1,98 @@
+.profile-navigation {
+    @media (max-width: $tablet-max) {
+        height: 50px;
+    }
+
+    &.opened {
+        .profile-navigation__list {
+            max-height: 500px;
+        }
+
+        .profile-navigation__item.active {
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        padding: 21px 26px 28px;
+        border: 1px solid $text-black;
+        background-color: $white;
+        transition: max-height 0.3s ease-in-out;
+        z-index: 10;
+
+        @media (max-width: $tablet-max) {
+            max-height: 50px;
+            overflow: hidden;
+            padding: 15px;
+        }
+    }
+
+    &__item {
+
+        @media (max-width: $tablet-max) {
+            text-align: center;
+        }
+
+
+        &:not(:first-of-type) {
+            margin: 12px 0 0;
+
+            @media (max-width: $tablet-max) {
+                margin: 10px 0 0;
+            }
+        }
+
+        &.active {
+            position: relative;
+
+            .profile-navigation__link {
+                box-shadow: 0 1px 0 $text-black;
+
+                &:not(.active) {
+                    cursor: pointer;
+        
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            &::after {
+                width: 14px;
+                height: 7px;
+                content: none;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url(../img/official/arrow_select.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: transform 0.3s ease-in-out;
+
+                @media (max-width: $tablet-max) {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 400;
+        text-align: left;
+        color: $text-black;
+        cursor: default;
+        transition: 0.2s ease-in-out;
+        transition-property: opacity, box-shadow;
+
+        @media (max-width: $tablet-max) {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+}

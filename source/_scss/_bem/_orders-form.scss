@@ -1,0 +1,206 @@
+.orders-form {
+    &__wrapper {
+        display: grid;
+        column-gap: 70px;
+        align-items: start;
+        grid-template-columns: 1fr 300px;
+
+        @media (max-width: $tablet-max) {
+            display: block;
+        }
+    }
+
+    &__info {
+        height: auto;
+        padding: 32px 28px 46px 32px;
+        background-color: $dark-gray;
+
+        @media (max-width: $tablet-max) {
+            display: flex;
+            flex-direction: column;
+            max-width: 480px;
+            margin: 40px 0 0;
+            padding: 28px 50px 32px;
+        }
+
+        &-delivery,
+        &-total {
+            font-size: 18px;
+            line-height: 38px;
+            font-weight: 500;
+            text-align: left;
+            color: $black;
+
+            @media (max-width: $tablet-max) {
+                font-size: 24px;
+                line-height: 45px;
+                text-align: center;
+            }
+        }
+
+        &-confirm {
+            margin: 12px 0 0;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 500;
+
+            @media (max-width: $tablet-max) {
+                order: 1;
+                margin: 40px 0 0;
+                text-align: center;
+            }
+
+            a {
+                font: inherit;
+                color: inherit;
+                transition: opacity 0.2s ease-in-out;
+                box-shadow: 0 1px 0 $black;
+
+                &:hover {
+                    opacity: 0.7;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .orders-form__submit {
+        margin: 32px 0 0;
+
+        @media (max-width: $tablet-max) {
+            margin: 32px auto 0;
+            padding: 19px 12px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 26px;
+        row-gap: 37px;
+
+        @media (max-width: $tablet-max) {
+            grid-template-columns: 1fr;
+            row-gap: 32px;
+        }
+
+        .form__field-input {
+            height: 40px;
+            padding: 8px 16px;
+            font-weight: 500;
+
+            @media (max-width: $tablet-max) {
+                height: 50px;
+                padding: 6px 16px;
+            }
+
+            &::placeholder {
+                font-weight: 500;
+                color: $black;
+            }
+        }
+    }
+
+    &__radio {
+        display: flex;
+        align-items: flex-start;
+        margin: 56px 0 0;
+
+        @media (max-width: $tablet-max) {
+            display: block;
+            margin: 68px 0 0;
+        }
+
+        &-inner {
+            width: 100%;
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 24px;
+            row-gap: 16px;
+
+            @media (max-width: $tablet-max) {
+                display: block;
+            }
+
+            .form__radio {
+                &:not(:first-of-type) {
+                    @media (max-width: $tablet-max) {
+                        margin: 24px 0 0;
+                    }
+                }
+            }
+        }
+
+        &-group {
+            @media (max-width: $tablet-max) {
+                margin: 32px 0 0;
+            }
+        }
+    }
+
+    &__title {
+        flex: 0 0 162px;
+        padding: 0 16px 0 0;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 900;
+        color: $text-black;
+
+        @media (max-width: $tablet-max) {
+            font-size: 25px;
+            line-height: 30px;
+        }
+    }
+
+    &__delivery {
+        &-info {
+            margin: 24px 0 0;
+            padding: 0 0 0 27px;
+            font-size: 14px;
+            font-weight: 500;
+
+            @media (max-width: $tablet-max) {
+                display: none;
+            }
+        }
+
+        &-price {
+            line-height: 18px;
+        }
+
+        &-desc {
+            margin: 8px 0 0;
+            line-height: 24px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 48px 0 0;
+
+        @media (max-width: $tablet-max) {
+            display: block;
+        }
+    }
+
+    &__textarea {
+        width: 520px;
+
+        @media (max-width: $tablet-max) {
+            width: 100%;
+            max-width: 520px;
+        }
+    }
+
+    .order-form__promo {
+        width: 250px;
+
+        @media (max-width: $tablet-max) {
+            width: 100%;
+            margin: 30px 0 0;
+        }
+    }
+
+}

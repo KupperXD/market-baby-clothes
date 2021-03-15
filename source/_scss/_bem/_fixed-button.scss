@@ -1,0 +1,59 @@
+.fixed-button {
+    position: fixed;
+    right: 42px;
+    bottom: calc(24px + 54px + 12px);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: 0.3s ease-in-out;
+    transition-property: opacity, visibility, transform;
+
+    @media (max-width: $tablet-max) {
+        right: 24px;
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &.fixed-button--whatsapp {
+        bottom: 24px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        .fixed-button {
+            &__button {
+                background-color: #99b42c;
+
+                svg {
+                    width: 26px;
+                    height: 26px;
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        padding: 0;
+        background-color: #f5d44f;
+        border: none;
+        border-radius: 100%;
+        box-shadow: 0 13px 16px rgba(164, 164, 164, 0.2);
+
+        svg {
+            width: 28px;
+            height: 24px;
+            transform: rotate(-90deg);
+        }
+    }
+}

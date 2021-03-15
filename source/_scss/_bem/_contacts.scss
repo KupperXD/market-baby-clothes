@@ -1,0 +1,114 @@
+.contacts {
+    position: relative;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: $text-black;
+    overflow: hidden;
+
+    @media (max-width: $tablet-max) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: calc(((100% - 1170px) / 2) - 56px);
+        width: 423px;
+        height: 229px;
+        background-image: url('../img/official/decor-human-all.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: $tablet-max) {
+            width: 318px;
+            height: 172px;
+            left: 8px;
+        }
+    }
+
+    &__wrapper {
+        padding: 190px 0 82px;
+
+        @media (max-width: $tablet-max) {
+            padding: 146px 0 260px;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $text-black;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: auto 468px;
+        grid-template-rows: max-content auto;
+        margin: 60px 0 0;
+
+        @media (max-width: $tablet-max) {
+            display: block;
+            margin: 48px 0 0;
+        }
+    }
+
+    &__content {
+        max-width: 520px;
+        grid-column: 1;
+        grid-row: 1;
+
+        @media (max-width: $tablet-max) {
+            width: 410px;
+        }
+    }
+
+    &__text {
+        &:not(:first-of-type) {
+            margin: 16px 0 0;
+
+            @media (max-width: $tablet-max) {
+                margin: 20px 0 0;
+            }
+        }
+
+        a {
+            color: inherit;
+            box-shadow: 0 1px 0 $text-black;
+            transition: 0.2s ease-in-out;
+            transition-property: opacity, box-shadow;
+
+            &:hover {
+                opacity: 0.7;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__banks {
+        grid-column: 1;
+        grid-row: 2/3;
+        padding: 40px 0 0;
+
+        &-content {
+            &:not(:first-of-type) {
+                margin: 16px 0 0;
+            }
+        }
+    }
+
+    &__feedback {
+        max-width: 520px;
+        grid-column: 2;
+        grid-row: 1/-1;
+
+        @media (max-width: $tablet-max) {
+            max-width: none;
+            margin: 56px -20px 0;
+        }
+    }
+}

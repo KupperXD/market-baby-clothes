@@ -8,10 +8,97 @@
         color: red;
     }
 
+    &__promo-checker {
+        width: 24px;
+        height: 18px;
+        position: absolute;
+        right: 11px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__promo-true,
+    &__promo-false {
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+    }
+
+    &__promo-true {
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom: 2px solid #99b42c;
+        border-left: 2px solid #99b42c;
+        transform: rotate(320deg);
+        transform-origin: center;
+    }
+
+    &__promo-false {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: #ed805b;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 100px;
+        min-height: 100px;
+        max-height: 322px;
+        padding: 16px;
+        background-color: $white;
+        border: 1px solid $text-black;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 500;
+        resize: vertical;
+        color: $black;
+
+        @media (max-width: $tablet-max) {
+            height: 210px;
+            min-height: 210px;
+            font-size: 16px;
+        }
+
+        &::placeholder {
+            font-size: 13px;
+            font-weight: 500;
+            color: $black;
+
+            @media (max-width: $tablet-max) {
+                font-size: 16px;
+            }
+        }
+    }
+
 
     &__field {
         display: flex;
         flex-direction: column;
+
+
         &:not(:first-of-type) {
             margin: 24px 0 0;
 
@@ -20,11 +107,28 @@
             }
         }
 
+        &.form__field--no-gap {
+            margin: 0;
+        }
+
         &.has-error {
             .form__field-input {
                 border-color: red;
             }
         }
+
+        &.promo-true {
+            .form__promo-true {
+                opacity: 1;
+            }
+        }
+
+        &.promo-false {
+            .form__promo-false {
+                opacity: 1;
+            }
+        }
+
 
         &--mobile-hidden {
             @media (max-width: $tablet-max) {
@@ -34,6 +138,7 @@
 
         &-label {
             width: 100%;
+            position: relative;
         }
 
         &-input {
@@ -45,11 +150,84 @@
             line-height: 24px;
             color: $black;
 
+            @media (max-width: $tablet-max) {
+                padding: 6px 24px;
+                font-size: 16px;
+                line-height: 38px;
+            }
+
             &::placeholder {
                 font-size: 13px;
                 font-family: inherit;
                 color: $black;
+
+                @media (max-width: $tablet-max) {
+                    font-size: 16px;
+                }
             }
+        }
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $tablet-max) {
+            flex-wrap: wrap;
+        }
+
+        input:checked  ~ .form__custom-radio {
+            background-color: $text-black;
+        }
+
+        input:checked ~ .form__radio-desc {
+            max-height: 500px;
+            padding-top: 8px;
+        }
+
+        &-desc {
+            display: none;
+            padding: 0 0 0 16px;
+            line-height: 24px;
+            font-weight: 500;
+
+            @media (max-width: $tablet-max) {
+                display: block;
+                max-height: 0;
+                padding: 0 0 0 34px;
+                overflow: hidden;
+                transition: 0.2s ease-in-out;
+                transition-property: padding, max-height;
+            }
+
+            .price {
+                font-size: 21px;
+            }
+
+            .text {
+                margin: 4px 0 0;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__custom-radio {
+        width: 15px;
+        height: 15px;
+        margin: 0 12px 0 0;
+        border: 1px solid $text-black;
+        background-color: transparent;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &__radio-text {
+        font-size: 16px;
+        line-height: 38px;
+        font-weight: 500;
+
+        @media (max-width: $tablet-max) {
+            font-size: 21px;
+            line-height: 24px;
         }
     }
 

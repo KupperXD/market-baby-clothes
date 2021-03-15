@@ -21,11 +21,15 @@ const include = require("posthtml-include");
 
 const pluginsJSPaths = [
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'node_modules/swiper/js/swiper.min.js',
+    'node_modules/select2/dist/js/select2.min.js'
 ];
 
 const pluginsCSSPaths = [
     'node_modules/magnific-popup/dist/magnific-popup.css',
+    'node_modules/swiper/css/swiper.min.css',
+    'node_modules/select2/dist/css/select2.min.css',
 ];
 
 const copySrc = [

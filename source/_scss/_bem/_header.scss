@@ -18,7 +18,7 @@
                 color: $text-black;
             }
 
-            .header__basket-inner span {
+            .header__basket-inner .total-basket {
                 background-color: $text-black;
                 color: $white;
             }
@@ -287,18 +287,28 @@
         }
         &-inner {
             position: relative;
+        
 
             @media (max-width: $tablet-max) {
                 display: block;
             }
 
+
             &.has-items {
-                span {
+                .total-basket {
                     display: flex;
+                }
+
+                &:hover {
+                    .header__basket-dropdown {
+                        opacity: 1;
+                        transform: translateY(0);
+                        visibility: visible;
+                    }
                 }
             }
 
-            span {
+            .total-basket {
                 display: none;
                 align-items: center;
                 justify-content: center;
@@ -413,5 +423,18 @@
                 height: 100%;
             }
         }
+    }
+
+    &__basket-dropdown {
+        position: absolute;
+        top: calc(100% + 16px);
+        right: 0;
+        z-index: 20;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-12px);
+        transition: 0.2s ease-in-out;
+        transition-property: opacity, transform, visibility;
+        transition-delay: 300ms;
     }
 }
